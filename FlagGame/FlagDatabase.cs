@@ -14,14 +14,13 @@ namespace FlagGame
 
         FlagDatabase();
 
-        public void LoadXml()
+        public void LoadXml(string path)
         {
-            XDocument xdocument = new XDocument();
-            IEnumerable<XElement> mainElement = xdocument.Elements();
+            XDocument loadFile = XDocument.Load(path);
+            XElement mainElement = loadFile.Element("flags");
 
-            foreach (var flags in mainElement)
-                foreach (var flag in flags.Elements())
-                     flags.Add(new Flag(flag.FirstAttribute.Value.ToString(), flag.LastAttribute.Value.ToString()));
+            foreach (var flag in mainElement.Elements("flag"))
+                flags.Add(new Flag(flag.Attribute("name").Value, flag.Attribute("path").Value));
         }
 
         public void SaveXml()
@@ -29,8 +28,9 @@ namespace FlagGame
         }
 
         public Flag getRandomFlag()
-        {//to do
-            return new Flag("", "");
+        {
+            Random rnd = new Random();
+            return flags[rnd.Next(0, flags.Count)];
         }
 
         public List<Flag> FlagsList()
