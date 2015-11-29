@@ -16,5 +16,12 @@ namespace FlagsGame
         {
             InitializeComponent();
         }
+
+        private void Launcher_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
