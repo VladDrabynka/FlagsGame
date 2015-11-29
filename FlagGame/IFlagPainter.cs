@@ -7,8 +7,8 @@ using System.Drawing;
 
 namespace FlagGame
 {
-    interface IFlagPainter
+    public interface IFlagPainter
     {
-        public Bitmap Draw(Flag flag);
+        Bitmap Draw(Flag flag);
     }
 }

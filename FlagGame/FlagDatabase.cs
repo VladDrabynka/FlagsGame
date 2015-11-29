@@ -8,11 +8,11 @@ using System.IO;
 
 namespace FlagGame
 {
-    class FlagDatabase
+    public class FlagDatabase
     {
         List<Flag> flags;
 
-        FlagDatabase();
+        //FlagDatabase();
 
         public void LoadXml(string path)
         {

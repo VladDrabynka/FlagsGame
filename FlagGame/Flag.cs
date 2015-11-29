@@ -8,10 +8,15 @@ using System.IO;
 
 namespace FlagGame
 {
-    class Flag
+    public class Flag
     {
         string _name, _path;
         IFlagPainter _painter;
+
+        public Flag()
+        { 
+            
+        }
 
         public Flag(string name, string path)
         {

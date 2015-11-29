@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FlagGame;
 
 namespace FlagsGame
 {
@@ -15,6 +16,11 @@ namespace FlagsGame
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            Flag flag = new Flag();
         }
     }
 }

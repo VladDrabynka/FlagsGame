@@ -8,9 +8,9 @@ using System.IO;
 
 namespace FlagGame
 {
-    class FlagPainter : IFlagPainter
+    public class FlagPainter : IFlagPainter
     {
-        Bitmap Draw(Flag flag)
+        public Bitmap Draw(Flag flag)
         {
             return new Bitmap(flag.Path.ToString());
         }
