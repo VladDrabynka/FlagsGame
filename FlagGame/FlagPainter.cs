@@ -12,7 +12,7 @@ namespace FlagGame
     {
         public Bitmap Draw(Flag flag)
         {
-            return new Bitmap(flag.Path.ToString());
+            return new Bitmap(flag.Path);
         }
     }
 }

@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.pbFlag = new System.Windows.Forms.PictureBox();
+            this.btnVariantD = new System.Windows.Forms.Button();
+            this.btnVariantC = new System.Windows.Forms.Button();
             this.btnVariantA = new System.Windows.Forms.Button();
             this.btnVariantB = new System.Windows.Forms.Button();
-            this.btnVariantC = new System.Windows.Forms.Button();
-            this.btnVariantD = new System.Windows.Forms.Button();
+            this.pbFlag = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFlag)).BeginInit();
@@ -77,34 +77,16 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(494, 141);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // pbFlag
+            // btnVariantD
             // 
-            this.pbFlag.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbFlag.Location = new System.Drawing.Point(169, 3);
-            this.pbFlag.Name = "pbFlag";
-            this.pbFlag.Size = new System.Drawing.Size(494, 334);
-            this.pbFlag.TabIndex = 1;
-            this.pbFlag.TabStop = false;
-            // 
-            // btnVariantA
-            // 
-            this.btnVariantA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnVariantA.Location = new System.Drawing.Point(3, 3);
-            this.btnVariantA.Name = "btnVariantA";
-            this.btnVariantA.Size = new System.Drawing.Size(241, 64);
-            this.btnVariantA.TabIndex = 0;
-            this.btnVariantA.Text = "button1";
-            this.btnVariantA.UseVisualStyleBackColor = true;
-            // 
-            // btnVariantB
-            // 
-            this.btnVariantB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnVariantB.Location = new System.Drawing.Point(250, 3);
-            this.btnVariantB.Name = "btnVariantB";
-            this.btnVariantB.Size = new System.Drawing.Size(241, 64);
-            this.btnVariantB.TabIndex = 1;
-            this.btnVariantB.Text = "button2";
-            this.btnVariantB.UseVisualStyleBackColor = true;
+            this.btnVariantD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnVariantD.Location = new System.Drawing.Point(250, 73);
+            this.btnVariantD.Name = "btnVariantD";
+            this.btnVariantD.Size = new System.Drawing.Size(241, 65);
+            this.btnVariantD.TabIndex = 3;
+            this.btnVariantD.Text = "button4";
+            this.btnVariantD.UseVisualStyleBackColor = true;
+            this.btnVariantD.Click += new System.EventHandler(this.btnVariantD_Click);
             // 
             // btnVariantC
             // 
@@ -115,16 +97,38 @@
             this.btnVariantC.TabIndex = 2;
             this.btnVariantC.Text = "button3";
             this.btnVariantC.UseVisualStyleBackColor = true;
+            this.btnVariantC.Click += new System.EventHandler(this.btnVariantC_Click);
             // 
-            // btnVariantD
+            // btnVariantA
             // 
-            this.btnVariantD.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnVariantD.Location = new System.Drawing.Point(250, 73);
-            this.btnVariantD.Name = "btnVariantD";
-            this.btnVariantD.Size = new System.Drawing.Size(241, 65);
-            this.btnVariantD.TabIndex = 3;
-            this.btnVariantD.Text = "button4";
-            this.btnVariantD.UseVisualStyleBackColor = true;
+            this.btnVariantA.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnVariantA.Location = new System.Drawing.Point(3, 3);
+            this.btnVariantA.Name = "btnVariantA";
+            this.btnVariantA.Size = new System.Drawing.Size(241, 64);
+            this.btnVariantA.TabIndex = 0;
+            this.btnVariantA.Text = "button1";
+            this.btnVariantA.UseVisualStyleBackColor = true;
+            this.btnVariantA.Click += new System.EventHandler(this.btnVariantA_Click);
+            // 
+            // btnVariantB
+            // 
+            this.btnVariantB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnVariantB.Location = new System.Drawing.Point(250, 3);
+            this.btnVariantB.Name = "btnVariantB";
+            this.btnVariantB.Size = new System.Drawing.Size(241, 64);
+            this.btnVariantB.TabIndex = 1;
+            this.btnVariantB.Text = "button2";
+            this.btnVariantB.UseVisualStyleBackColor = true;
+            this.btnVariantB.Click += new System.EventHandler(this.btnVariantB_Click);
+            // 
+            // pbFlag
+            // 
+            this.pbFlag.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbFlag.Location = new System.Drawing.Point(169, 3);
+            this.pbFlag.Name = "pbFlag";
+            this.pbFlag.Size = new System.Drawing.Size(494, 334);
+            this.pbFlag.TabIndex = 1;
+            this.pbFlag.TabStop = false;
             // 
             // MainForm
             // 

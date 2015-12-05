@@ -11,11 +11,13 @@ namespace FlagGame
     public class FlagDatabase
     {
         List<Flag> flags;
-
+        List<Flag> workingFlags;
         //FlagDatabase();
 
         public void LoadXml(string path)
         {
+            flags = new List<Flag>();
+            workingFlags = new List<Flag>();
             XDocument loadFile = XDocument.Load(path);
             XElement mainElement = loadFile.Element("flags");
 
@@ -30,7 +32,28 @@ namespace FlagGame
         public Flag getRandomFlag()
         {
             Random rnd = new Random();
-            return flags[rnd.Next(0, flags.Count)];
+            Flag flag = new Flag();
+            flag = flags[rnd.Next(0, flags.Count)];
+            workingFlags.Add(flag);
+            return flag;
+        }
+
+        public Flag getOtherRandomFlag()
+        {
+            Random rnd = new Random();
+            Flag flag = new Flag();
+            do
+            {
+                flag = flags[rnd.Next(0, flags.Count)];
+            }
+            while (workingFlags.IndexOf(flag) != -1);
+            workingFlags.Add(flag);  
+            return flag;
+        }
+
+        public void clearWorkFlags()
+        {
+            workingFlags.Clear();
         }
 
         public List<Flag> FlagsList()
