@@ -16,6 +16,8 @@ namespace FlagsGame
         string path = @"E:\Development\Kurs3\FlagsGame\FlagGame";
         Flag flag = new Flag(), flagBuffer = new Flag();
         FlagDatabase flagDb = new FlagDatabase();
+        int count = 0;
+        Button trueButton;
 
         public MainForm()
         {
@@ -28,54 +30,13 @@ namespace FlagsGame
             loadFlagForm();
         }
 
-        private void btnVariantA_Click(object sender, EventArgs e)
+        private void buttonClick(object sender, EventArgs e)
         {
-            if (btnVariantA.Text == flag.Name)
+            if ((sender as Button) == trueButton)
             {
                 MessageBox.Show("Правильный ответ!", "Ответ");
-                loadFlagForm();
-            }
-            else
-            {
-                MessageBox.Show("Неправильный ответ! Правильный: " + flag.Name, "Ответ");
-                this.Close();
-            }
-
-        }
-
-        private void btnVariantB_Click(object sender, EventArgs e)
-        {
-            if (btnVariantB.Text == flag.Name)
-            {
-                MessageBox.Show("Правильный ответ!", "Ответ");
-                loadFlagForm();
-            }
-            else
-            {
-                MessageBox.Show("Неправильный ответ! Правильный: " + flag.Name, "Ответ");
-                this.Close();
-            }
-        }
-
-        private void btnVariantC_Click(object sender, EventArgs e)
-        {
-             if (btnVariantC.Text == flag.Name)
-             {
-                 MessageBox.Show("Правильный ответ!", "Ответ");
-                 loadFlagForm();
-             }
-             else
-             {
-                 MessageBox.Show("Неправильный ответ! Правильный: " + flag.Name, "Ответ");
-                 this.Close();
-             }
-        }
-
-        private void btnVariantD_Click(object sender, EventArgs e)
-        {
-            if (btnVariantD.Text == flag.Name)
-            {
-                MessageBox.Show("Правильный ответ!", "Ответ");
+                ++count;
+                lbCount.Text = count.ToString();
                 loadFlagForm();
             }
             else
@@ -105,47 +66,27 @@ namespace FlagsGame
             flag = flagDb.getRandomFlag();
             Draw();
             Random rnd = new Random();
-            switch (rnd.Next(1, 4))
-            {
-                case 1: btnVariantA.Text = flag.Name;
-                    flagBuffer = flagDb.getRandomFlag();
-                    btnVariantB.Text = flagBuffer.Name;
-                    flagBuffer = flagDb.getRandomFlag();
-                    btnVariantC.Text = flagBuffer.Name;
-                    flagBuffer = flagDb.getRandomFlag();
-                    btnVariantD.Text = flagBuffer.Name;
-                    break;
-                case 2: btnVariantB.Text = flag.Name;
-                    flagBuffer = flagDb.getRandomFlag();
-                    btnVariantA.Text = flagBuffer.Name;
-                    flagBuffer = flagDb.getRandomFlag();
-                    btnVariantC.Text = flagBuffer.Name;
-                    flagBuffer = flagDb.getRandomFlag();
-                    btnVariantD.Text = flagBuffer.Name;
-                    break;
-                case 3: btnVariantC.Text = flag.Name;
-                    flagBuffer = flagDb.getRandomFlag();
-                    btnVariantA.Text = flagBuffer.Name;
-                    flagBuffer = flagDb.getRandomFlag();
-                    btnVariantB.Text = flagBuffer.Name;
-                    flagBuffer = flagDb.getRandomFlag();
-                    btnVariantD.Text = flagBuffer.Name;
-                    break;
-                case 4: btnVariantD.Text = flag.Name;
-                    flagBuffer = flagDb.getRandomFlag();
-                    btnVariantA.Text = flagBuffer.Name;
-                    flagBuffer = flagDb.getRandomFlag();
-                    btnVariantB.Text = flagBuffer.Name;
-                    flagBuffer = flagDb.getRandomFlag();
-                    btnVariantC.Text = flagBuffer.Name;
-                    break;
-                default: MessageBox.Show("Switch generated something wrong!", "Switch in loadForm"); break;
-            }
+            List<Button> array = new List<Button>();
+            array.Add(btnVariantA);
+            array.Add(btnVariantB);
+            array.Add(btnVariantC);
+            array.Add(btnVariantD);
+            ShuffleList.Shuffle(array);
+            foreach (var btn in array)
+                btn.Text = flagDb.getRandomFlag().Name;
+            trueButton = array[0];
+            array[0].Text = flag.Name;
             flagDb.clearWorkFlags();
         }
+
         private void fillVariants(Flag flag)
         {
             Random rnd = new Random();
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
     }

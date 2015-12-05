@@ -12,7 +12,6 @@ namespace FlagGame
     {
         List<Flag> flags;
         List<Flag> workingFlags;
-        //FlagDatabase();
 
         public void LoadXml(string path)
         {
@@ -23,6 +22,8 @@ namespace FlagGame
 
             foreach (var flag in mainElement.Elements("flag"))
                 flags.Add(new Flag(flag.Attribute("name").Value, flag.Attribute("path").Value));
+
+            ShuffleList.Shuffle(flags);
         }
 
         public void SaveXml()
@@ -50,27 +51,17 @@ namespace FlagGame
             return flag;
         }
 
-        //public Flag getOtherRandomFlag()
-        //{
-        //    Random rnd = new Random();
-        //    Flag flag = new Flag();
-        //    do
-        //    {
-        //        flag = flags[rnd.Next(0, flags.Count)];
-        //    }
-        //    while (workingFlags.IndexOf(flag) != -1);
-        //    workingFlags.Add(flag);  
-        //    return flag;
-        //}
-
+        
         public void clearWorkFlags()
         {
             workingFlags.Clear();
         }
 
+       
         public List<Flag> FlagsList()
         { 
             return flags;
         }
+
     }
 }

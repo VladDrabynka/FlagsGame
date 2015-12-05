@@ -29,35 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnVariantD = new System.Windows.Forms.Button();
-            this.btnVariantC = new System.Windows.Forms.Button();
-            this.btnVariantA = new System.Windows.Forms.Button();
-            this.btnVariantB = new System.Windows.Forms.Button();
             this.pbFlag = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnVariantB = new System.Windows.Forms.Button();
+            this.btnVariantA = new System.Windows.Forms.Button();
+            this.btnVariantC = new System.Windows.Forms.Button();
+            this.btnVariantD = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbCountText = new System.Windows.Forms.Label();
+            this.lbCount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbFlag)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // pbFlag
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.pbFlag, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(834, 487);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.pbFlag.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbFlag.Location = new System.Drawing.Point(169, 3);
+            this.pbFlag.Name = "pbFlag";
+            this.pbFlag.Size = new System.Drawing.Size(494, 334);
+            this.pbFlag.TabIndex = 1;
+            this.pbFlag.TabStop = false;
             // 
             // tableLayoutPanel2
             // 
@@ -77,27 +72,16 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(494, 141);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // btnVariantD
+            // btnVariantB
             // 
-            this.btnVariantD.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnVariantD.Location = new System.Drawing.Point(250, 73);
-            this.btnVariantD.Name = "btnVariantD";
-            this.btnVariantD.Size = new System.Drawing.Size(241, 65);
-            this.btnVariantD.TabIndex = 3;
-            this.btnVariantD.Text = "button4";
-            this.btnVariantD.UseVisualStyleBackColor = true;
-            this.btnVariantD.Click += new System.EventHandler(this.btnVariantD_Click);
-            // 
-            // btnVariantC
-            // 
-            this.btnVariantC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnVariantC.Location = new System.Drawing.Point(3, 73);
-            this.btnVariantC.Name = "btnVariantC";
-            this.btnVariantC.Size = new System.Drawing.Size(241, 65);
-            this.btnVariantC.TabIndex = 2;
-            this.btnVariantC.Text = "button3";
-            this.btnVariantC.UseVisualStyleBackColor = true;
-            this.btnVariantC.Click += new System.EventHandler(this.btnVariantC_Click);
+            this.btnVariantB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnVariantB.Location = new System.Drawing.Point(250, 3);
+            this.btnVariantB.Name = "btnVariantB";
+            this.btnVariantB.Size = new System.Drawing.Size(241, 64);
+            this.btnVariantB.TabIndex = 1;
+            this.btnVariantB.Text = "button2";
+            this.btnVariantB.UseVisualStyleBackColor = true;
+            this.btnVariantB.Click += new System.EventHandler(this.buttonClick);
             // 
             // btnVariantA
             // 
@@ -108,27 +92,85 @@
             this.btnVariantA.TabIndex = 0;
             this.btnVariantA.Text = "button1";
             this.btnVariantA.UseVisualStyleBackColor = true;
-            this.btnVariantA.Click += new System.EventHandler(this.btnVariantA_Click);
+            this.btnVariantA.Click += new System.EventHandler(this.buttonClick);
             // 
-            // btnVariantB
+            // btnVariantC
             // 
-            this.btnVariantB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnVariantB.Location = new System.Drawing.Point(250, 3);
-            this.btnVariantB.Name = "btnVariantB";
-            this.btnVariantB.Size = new System.Drawing.Size(241, 64);
-            this.btnVariantB.TabIndex = 1;
-            this.btnVariantB.Text = "button2";
-            this.btnVariantB.UseVisualStyleBackColor = true;
-            this.btnVariantB.Click += new System.EventHandler(this.btnVariantB_Click);
+            this.btnVariantC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnVariantC.Location = new System.Drawing.Point(3, 73);
+            this.btnVariantC.Name = "btnVariantC";
+            this.btnVariantC.Size = new System.Drawing.Size(241, 65);
+            this.btnVariantC.TabIndex = 2;
+            this.btnVariantC.Text = "button3";
+            this.btnVariantC.UseVisualStyleBackColor = true;
+            this.btnVariantC.Click += new System.EventHandler(this.buttonClick);
             // 
-            // pbFlag
+            // btnVariantD
             // 
-            this.pbFlag.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbFlag.Location = new System.Drawing.Point(169, 3);
-            this.pbFlag.Name = "pbFlag";
-            this.pbFlag.Size = new System.Drawing.Size(494, 334);
-            this.pbFlag.TabIndex = 1;
-            this.pbFlag.TabStop = false;
+            this.btnVariantD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnVariantD.Location = new System.Drawing.Point(250, 73);
+            this.btnVariantD.Name = "btnVariantD";
+            this.btnVariantD.Size = new System.Drawing.Size(241, 65);
+            this.btnVariantD.TabIndex = 3;
+            this.btnVariantD.Text = "button4";
+            this.btnVariantD.UseVisualStyleBackColor = true;
+            this.btnVariantD.Click += new System.EventHandler(this.buttonClick);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.pbFlag, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(834, 487);
+            this.tableLayoutPanel1.TabIndex = 1;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.375F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.625F));
+            this.tableLayoutPanel3.Controls.Add(this.lbCountText, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.lbCount, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(160, 334);
+            this.tableLayoutPanel3.TabIndex = 2;
+            // 
+            // lbCountText
+            // 
+            this.lbCountText.AutoSize = true;
+            this.lbCountText.Location = new System.Drawing.Point(15, 15);
+            this.lbCountText.Margin = new System.Windows.Forms.Padding(15, 15, 0, 0);
+            this.lbCountText.Name = "lbCountText";
+            this.lbCountText.Size = new System.Drawing.Size(77, 13);
+            this.lbCountText.TabIndex = 0;
+            this.lbCountText.Text = "Right answers:";
+            // 
+            // lbCount
+            // 
+            this.lbCount.AutoSize = true;
+            this.lbCount.Location = new System.Drawing.Point(98, 15);
+            this.lbCount.Margin = new System.Windows.Forms.Padding(3, 15, 0, 0);
+            this.lbCount.Name = "lbCount";
+            this.lbCount.Size = new System.Drawing.Size(13, 13);
+            this.lbCount.TabIndex = 1;
+            this.lbCount.Text = "0";
             // 
             // MainForm
             // 
@@ -141,22 +183,28 @@
             this.Text = "Flags";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbFlag)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.PictureBox pbFlag;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button btnVariantD;
         private System.Windows.Forms.Button btnVariantC;
         private System.Windows.Forms.Button btnVariantA;
         private System.Windows.Forms.Button btnVariantB;
-        private System.Windows.Forms.PictureBox pbFlag;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Label lbCountText;
+        private System.Windows.Forms.Label lbCount;
+
     }
 }
 
