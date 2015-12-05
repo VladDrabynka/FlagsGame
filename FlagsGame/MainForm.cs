@@ -96,42 +96,40 @@ namespace FlagsGame
             switch (rnd.Next(1, 4))
             {
                 case 1: btnVariantA.Text = flag.Name;
-                    flagBuffer = flagDb.getOtherRandomFlag();
+                    flagBuffer = flagDb.getRandomFlag();
                     btnVariantB.Text = flagBuffer.Name;
-                    flagBuffer = flagDb.getOtherRandomFlag();
+                    flagBuffer = flagDb.getRandomFlag();
                     btnVariantC.Text = flagBuffer.Name;
-                    flagBuffer = flagDb.getOtherRandomFlag();
+                    flagBuffer = flagDb.getRandomFlag();
                     btnVariantD.Text = flagBuffer.Name;
                     break;
                 case 2: btnVariantB.Text = flag.Name;
-                    flagBuffer = flagDb.getOtherRandomFlag();
+                    flagBuffer = flagDb.getRandomFlag();
                     btnVariantA.Text = flagBuffer.Name;
-                    flagBuffer = flagDb.getOtherRandomFlag();
+                    flagBuffer = flagDb.getRandomFlag();
                     btnVariantC.Text = flagBuffer.Name;
-                    flagBuffer = flagDb.getOtherRandomFlag();
+                    flagBuffer = flagDb.getRandomFlag();
                     btnVariantD.Text = flagBuffer.Name;
                     break;
                 case 3: btnVariantC.Text = flag.Name;
-                    flagBuffer = flagDb.getOtherRandomFlag();
+                    flagBuffer = flagDb.getRandomFlag();
                     btnVariantA.Text = flagBuffer.Name;
-                    flagBuffer = flagDb.getOtherRandomFlag();
+                    flagBuffer = flagDb.getRandomFlag();
                     btnVariantB.Text = flagBuffer.Name;
-                    flagBuffer = flagDb.getOtherRandomFlag();
+                    flagBuffer = flagDb.getRandomFlag();
                     btnVariantD.Text = flagBuffer.Name;
                     break;
                 case 4: btnVariantD.Text = flag.Name;
-                    flagBuffer = flagDb.getOtherRandomFlag();
+                    flagBuffer = flagDb.getRandomFlag();
                     btnVariantA.Text = flagBuffer.Name;
-                    flagBuffer = flagDb.getOtherRandomFlag();
+                    flagBuffer = flagDb.getRandomFlag();
                     btnVariantB.Text = flagBuffer.Name;
-                    flagBuffer = flagDb.getOtherRandomFlag();
+                    flagBuffer = flagDb.getRandomFlag();
                     btnVariantC.Text = flagBuffer.Name;
                     break;
                 default: MessageBox.Show("Switch generated something wrong!", "Switch in loadForm"); break;
             }
             flagDb.clearWorkFlags();
         }
-
-      
     }
 }

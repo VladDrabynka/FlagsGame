@@ -33,23 +33,35 @@ namespace FlagGame
         {
             Random rnd = new Random();
             Flag flag = new Flag();
-            flag = flags[rnd.Next(0, flags.Count)];
-            workingFlags.Add(flag);
+            if (workingFlags.Capacity == 0)
+            {
+                flag = flags[rnd.Next(0, flags.Count)];
+                workingFlags.Add(flag);
+            }
+            else
+            {
+                do
+                {
+                    flag = flags[rnd.Next(0, flags.Count)];
+                }
+                while (workingFlags.IndexOf(flag) != -1);
+                workingFlags.Add(flag);  
+            }
             return flag;
         }
 
-        public Flag getOtherRandomFlag()
-        {
-            Random rnd = new Random();
-            Flag flag = new Flag();
-            do
-            {
-                flag = flags[rnd.Next(0, flags.Count)];
-            }
-            while (workingFlags.IndexOf(flag) != -1);
-            workingFlags.Add(flag);  
-            return flag;
-        }
+        //public Flag getOtherRandomFlag()
+        //{
+        //    Random rnd = new Random();
+        //    Flag flag = new Flag();
+        //    do
+        //    {
+        //        flag = flags[rnd.Next(0, flags.Count)];
+        //    }
+        //    while (workingFlags.IndexOf(flag) != -1);
+        //    workingFlags.Add(flag);  
+        //    return flag;
+        //}
 
         public void clearWorkFlags()
         {
