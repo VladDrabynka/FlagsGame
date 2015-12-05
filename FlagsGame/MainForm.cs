@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 using FlagGame;
 
 namespace FlagsGame
@@ -27,7 +28,16 @@ namespace FlagsGame
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            string pathStats = path + @"\stats.txt";
             flagDb.LoadXml(path + @"\FlagDatabase.xml");
+            //if (!File.Exists(pathStats))
+            //{
+            //    File.CreateText(pathStats);
+            //}
+            if (File.ReadAllText(pathStats).Length == 0)
+                lbBest.Text = "0";
+            else
+                lbBest.Text = File.ReadAllText(pathStats);
             loadFlagForm();
         }
 
@@ -38,6 +48,7 @@ namespace FlagsGame
                 MessageBox.Show("Правильный ответ!", "Ответ");
                 ++count;
                 lbCount.Text = count.ToString();
+                arrayBut.Clear();
                 loadFlagForm();
             }
             else
@@ -121,13 +132,21 @@ namespace FlagsGame
             List<Button> btns = arrayBut;
             btns.RemoveAt(0);
             int rndValue;
-            for (int i = 0; i < 2; ++i)
+            try
             {
-                rndValue = rnd.Next(0, btns.Count());
-                btns[rndValue].Enabled = false;
-                btns.RemoveAt(rndValue);
+                for (int i = 0; i < 2; ++i)
+                {
+                    rndValue = rnd.Next(0, btns.Count());
+                    btns[rndValue].Enabled = false;
+                    btns.RemoveAt(rndValue);
+                }
             }
-            btnFifty.Enabled = false;
+            catch
+            {
+                throw new Exception();
+            }
+
+            //btnFifty.Enabled = false;
         }
 
         private void btnSkip_Click(object sender, EventArgs e)
@@ -135,5 +154,16 @@ namespace FlagsGame
             loadFlagForm();
             btnSkip.Enabled = false;
         }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            string outputPath = path + @"\stats.txt";
+            //StringBuilder strB = new StringBuilder();
+            //strB.Append(count + "\n");
+            if (count > Convert.ToInt32(File.ReadAllText(outputPath)))
+                File.WriteAllText(outputPath, count.ToString());
+        }
+
+
     }
 }
