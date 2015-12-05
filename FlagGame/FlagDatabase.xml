@@ -1,9 +1,198 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <flags>
+  <flag name="Afghanistan" path="Resources\afghanistan.png" />
+  <flag name="Albania" path="Resources\albania.png" />
+  <flag name="Algeria" path="Resources\algeria.png" />
+  <flag name="Andorra" path="Resources\andorra.png" />
+  <flag name="Angola" path="Resources\angola.png" />
+  <flag name="Antigua" path="Resources\antigua.png" />
+  <flag name="Argentina" path="Resources\argentina.png" />
+  <flag name="Armenia" path="Resources\armenia.png" />
   <flag name="Australia" path="Resources\australia.png" />
+  <flag name="Austria" path="Resources\austria.png" />
+  <flag name="Azerbaijan" path="Resources\azerbaijan.png" />
+  <flag name="Bahamas" path="Resources\bahamas.png" />
+  <flag name="Bahrain" path="Resources\bahrain.png" />
+  <flag name="Bangladesh" path="Resources\bangladesh.png" />
+  <flag name="Barbados" path="Resources\barbados.png" />
+  <flag name="Belarus" path="Resources\belarus.png" />
+  <flag name="Belgium" path="Resources\belgium.png" />
+  <flag name="Belize" path="Resources\belize.png" />
+  <flag name="Benin" path="Resources\benin.png" />
+  <flag name="Bhutan" path="Resources\bhutan.png" />
+  <flag name="Bolivia" path="Resources\bolivia.png" />
+  <flag name="Bosnia" path="Resources\bosnia.png" />
+  <flag name="Botswana" path="Resources\botswana.png" />
+  <flag name="Brazil" path="Resources\brazil.png" />
+  <flag name="Great Britain" path="Resources\britain.png" />
+  <flag name="Brunei" path="Resources\brunei.png" />
+  <flag name="Bulgaria" path="Resources\bulgaria.png" />
+  <flag name="Burkina Faso" path="Resources\burkinafaso.png" />
+  <flag name="Burundi" path="Resources\burundi.png" />
+  <flag name="Cambodia" path="Resources\cambodia.png" />
+  <flag name="Cameroon" path="Resources\cameroon.png" />
   <flag name="Canada" path="Resources\canada.png" />
+  <flag name="Cape Verde" path="Resources\capeverde.png" />
+  <flag name="Central African Republic" path="Resources\carepublic.png" />
+  <flag name="Chad" path="Resources\chad.png" />
+  <flag name="Chile" path="Resources\chile.png" />
+  <flag name="China" path="Resources\china.png" />
+  <flag name="Columbia" path="Resources\columbia.png" />
+  <flag name="Comoros" path="Resources\comoros.png" />
+  <flag name="Congo" path="Resources\congo.png" />
+  <flag name="Costa Rica" path="Resources\costarica.png" />
+  <flag name="Croatia" path="Resources\croatia.png" />
+  <flag name="Cuba" path="Resources\cuba.png" />
+  <flag name="Cyprus" path="Resources\cyprus.png" />
+  <flag name="Czech" path="Resources\czech.png" />
+  <flag name="Democratic Republic of the Congo" path="Resources\dcongo.png" />
+  <flag name="Denmark" path="Resources\denmark.png" />
+  <flag name="Djibouti" path="Resources\djibouti.png" />
+  <flag name="Dominica" path="Resources\dominica.png" />
+  <flag name="Dominican Republic" path="Resources\dominican.png" />
+  <flag name="Ecuador" path="Resources\ecuador.png" />
+  <flag name="Equatorial Guinea" path="Resources\eguinea.png" />
+  <flag name="Egypt" path="Resources\egypt.png" />
+  <flag name="El Salvador" path="Resources\elsalvador.png" />
+  <flag name="United Arab Emirates" path="Resources\emirates.png" />
+  <flag name="Eritrea" path="Resources\eritrea.png" />
+  <flag name="Estonia" path="Resources\estonia.png" />
+  <flag name="Ethiopia" path="Resources\ethiopia.png" />
+  <flag name="Fiji" path="Resources\fiji.png" />
+  <flag name="Finland" path="Resources\finland.png" />
+  <flag name="France" path="Resources\france.png" />
+  <flag name="Gabon" path="Resources\gabon.png" />
+  <flag name="Gambia" path="Resources\gambia.png" />
+  <flag name="Georgia" path="Resources\georgia.png" />
+  <flag name="Germany" path="Resources\germany.png" />
+  <flag name="Ghana" path="Resources\ghana.png" />
+  <flag name="Greece" path="Resources\greece.png" />
+  <flag name="Grenada" path="Resources\grenada.png" />
+  <flag name="Guatemala" path="Resources\guatemala.png" />
+  <flag name="Guinea" path="Resources\guinea.png" />
+  <flag name="Guinea-Bissau" path="Resources\guineabis.png" />
+  <flag name="Guyana" path="Resources\guyana.png" />
+  <flag name="Haiti" path="Resources\haiti.png" />
+  <flag name="Honduras" path="Resources\honduras.png" />
+  <flag name="Hungary" path="Resources\hungary.png" />
+  <flag name="Iceland" path="Resources\iceland.png" />
+  <flag name="India" path="Resources\india.png" />
+  <flag name="Indonesia" path="Resources\indonesia.png" />
+  <flag name="Iran" path="Resources\iran.png" />
+  <flag name="Iraq" path="Resources\iraq.png" />
+  <flag name="Ireland" path="Resources\ireland.png" />
   <flag name="Israel" path="Resources\israel.png" />
+  <flag name="Italy" path="Resources\italy.png" />
+  <flag name="Ivory Coast" path="Resources\ivorycoast.png" />
+  <flag name="Jamaica" path="Resources\jamaica.png" />
+  <flag name="Japan" path="Resources\japan.png" />
+  <flag name="Jordan" path="Resources\jordan.png" />
+  <flag name="Kazakhstan" path="Resources\kazakhstan.png" />
+  <flag name="Kenya" path="Resources\kenya.png" />
+  <flag name="Kiribati" path="Resources\kiribati.png" />
+  <flag name="Saint Kitts and Nevis" path="Resources\kittsnevis.png" />
+  <flag name="Kuwait" path="Resources\kuwait.png" />
+  <flag name="Kyrgyzstan" path="Resources\kyrgyzstan.png" />
+  <flag name="Laos" path="Resources\laos.png" />
+  <flag name="Latvia" path="Resources\latvia.png" />
+  <flag name="Lebanon" path="Resources\lebanon.png" />
+  <flag name="Lesotho" path="Resources\lesotho.png" />
+  <flag name="Liberia" path="Resources\liberia.png" />
+  <flag name="Libya" path="Resources\libya.png" />
+  <flag name="Liechtenstein" path="Resources\liechtenstein.png" />
+  <flag name="Lithuania" path="Resources\lithuania.png" />
+  <flag name="Lucia" path="Resources\lucia.png" />
+  <flag name="Luxembourg" path="Resources\luxembourg.png" />
+  <flag name="Macedonia" path="Resources\macedonia.png" />
+  <flag name="Madagascar" path="Resources\madagascar.png" />
+  <flag name="Malawi" path="Resources\malawi.png" />
+  <flag name="Malaysia" path="Resources\malaysia.png" />
+  <flag name="Maldives" path="Resources\maldives.png" />
+  <flag name="Mali" path="Resources\mali.png" />
+  <flag name="Malta" path="Resources\malta.png" />
+  <flag name="Marshall Islands" path="Resources\marislands.png" />
+  <flag name="Mauritania" path="Resources\mauritania.png" />
+  <flag name="Mauritius" path="Resources\mauritius.png" />
+  <flag name="Mexico" path="Resources\mexico.png" />
+  <flag name="Micronesia" path="Resources\micronesia.png" />
+  <flag name="Moldova" path="Resources\moldova.png" />
+  <flag name="Monaco" path="Resources\monaco.png" />
+  <flag name="Mongolia" path="Resources\mongolia.png" />
+  <flag name="Montenegro" path="Resources\montenegro.png" />
+  <flag name="Morocco" path="Resources\morocco.png" />
+  <flag name="Mozambique" path="Resources\mozambique.png" />
+  <flag name="Myanmar" path="Resources\myanmar.png" />
+  <flag name="Namibia" path="Resources\namibia.png" />
+  <flag name="Nauru" path="Resources\nauru.png" />
+  <flag name="North Corea" path="Resources\ncorea.png" />
+  <flag name="Nepal" path="Resources\nepal.png" />
+  <flag name="Netherlands" path="Resources\netherlands.png" />
+  <flag name="Newzealand" path="Resources\newzealand.png" />
+  <flag name="Nicaragua" path="Resources\nicaragua.png" />
+  <flag name="Niger" path="Resources\niger.png" />
+  <flag name="Nigeria" path="Resources\nigeria.png" />
+  <flag name="Norway" path="Resources\norway.png" />
+  <flag name="Oman" path="Resources\oman.png" />
+  <flag name="Pakistan" path="Resources\pakistan.png" />
+  <flag name="Palau" path="Resources\palau.png" />
+  <flag name="Panama" path="Resources\panama.png" />
+  <flag name="Paraguay" path="Resources\paraguay.png" />
+  <flag name="Peru" path="Resources\peru.png" />
+  <flag name="Philippines" path="Resources\philippines.png" />
+  <flag name="Pnguinea" path="Resources\pnguinea.png" />
+  <flag name="Poland" path="Resources\poland.png" />
+  <flag name="Portugal" path="Resources\portugal.png" />
+  <flag name="Qatar" path="Resources\qatar.png" />
+  <flag name="Romania" path="Resources\romania.png" />
   <flag name="Russia" path="Resources\russia.png" />
+  <flag name="Rwanda" path="Resources\rwanda.png" />
+  <flag name="South Africa" path="Resources\safrica.png" />
+  <flag name="Samoa" path="Resources\samoa.png" />
+  <flag name="San Marino" path="Resources\sanmarino.png" />
+  <flag name="Saudi Arabia" path="Resources\sarabia.png" />
+  <flag name="South Corea" path="Resources\scorea.png" />
+  <flag name="Senegal" path="Resources\senegal.png" />
+  <flag name="Serbia" path="Resources\serbia.png" />
+  <flag name="Seychelles" path="Resources\seychelles.png" />
+  <flag name="Sierra Leone" path="Resources\sierleone.png" />
+  <flag name="Singapore" path="Resources\singapore.png" />
+  <flag name="Slovakia" path="Resources\slovakia.png" />
+  <flag name="Slovenia" path="Resources\slovenia.png" />
+  <flag name="Solomon Islands" path="Resources\solislands.png" />
+  <flag name="Somalia" path="Resources\somalia.png" />
+  <flag name="Spain" path="Resources\spain.png" />
+  <flag name="Sri Lanka" path="Resources\srilanka.png" />
+  <flag name="Sao Tome and Principe" path="Resources\staprincipe.png" />
+  <flag name="Sudan" path="Resources\sudan.png" />
+  <flag name="Suriname" path="Resources\suriname.png" />
+  <flag name="Saint Vincent and the Grenadines" path="Resources\svgrenadines.png" />
+  <flag name="Swaziland" path="Resources\swaziland.png" />
+  <flag name="Sweden" path="Resources\sweden.png" />
+  <flag name="Switzerland" path="Resources\switzerland.png" />
+  <flag name="Syria" path="Resources\syria.png" />
+  <flag name="Taiwan" path="Resources\taiwan.png" />
+  <flag name="Tajikistan" path="Resources\tajikistan.png" />
+  <flag name="Tanzania" path="Resources\tanzania.png" />
+  <flag name="Thailand" path="Resources\thailand.png" />
+  <flag name="East Timor" path="Resources\timor.png" />
+  <flag name="Trinidad and Tobago" path="Resources\tobago.png" />
+  <flag name="Togo" path="Resources\togo.png" />
+  <flag name="Tonga" path="Resources\tonga.png" />
+  <flag name="Tunisia" path="Resources\tunisia.png" />
+  <flag name="Turkey" path="Resources\turkey.png" />
+  <flag name="Turkmenistan" path="Resources\turkmenistan.png" />
+  <flag name="Tuvalu" path="Resources\tuvalu.png" />
+  <flag name="Uganda" path="Resources\uganda.png" />
   <flag name="Ukraine" path="Resources\ukraine.png" />
+  <flag name="Uruguay" path="Resources\uruguay.png" />
+  <flag name="U.S.A." path="Resources\usa.png" />
+  <flag name="Uzbekistan" path="Resources\uzbekistan.png" />
+  <flag name="Vanuatu" path="Resources\vanuatu.png" />
+  <flag name="Vatican" path="Resources\vatican.png" />
+  <flag name="Venezuela" path="Resources\venezuela.png" />
   <flag name="Vietnam" path="Resources\vietnam.png" />
+  <flag name="Western Sahara" path="Resources\wsahara.png" />
+  <flag name="Yemen" path="Resources\yemen.png" />
+  <flag name="Zambia" path="Resources\zambia.png" />
+  <flag name="Zimbabwe" path="Resources\zimbabwe.png" />
 </flags>

@@ -37,7 +37,7 @@ namespace FlagsGame
             }
             else
             {
-                MessageBox.Show("Неправильный ответ!", "Ответ");
+                MessageBox.Show("Неправильный ответ! Правильный: " + flag.Name, "Ответ");
                 this.Close();
             }
 
@@ -52,7 +52,7 @@ namespace FlagsGame
             }
             else
             {
-                MessageBox.Show("Неправильный ответ!", "Ответ");
+                MessageBox.Show("Неправильный ответ! Правильный: " + flag.Name, "Ответ");
                 this.Close();
             }
         }
@@ -66,7 +66,7 @@ namespace FlagsGame
              }
              else
              {
-                 MessageBox.Show("Неправильный ответ!", "Ответ");
+                 MessageBox.Show("Неправильный ответ! Правильный: " + flag.Name, "Ответ");
                  this.Close();
              }
         }
@@ -80,18 +80,30 @@ namespace FlagsGame
             }
             else
             {
-                MessageBox.Show("Неправильный ответ!", "Ответ");
+                MessageBox.Show("Неправильный ответ! Правильный: " + flag.Name, "Ответ");
                 this.Close();
             }
 
         }
 
-        private void loadFlagForm()
+        private void Draw()
         {
             FlagPainter flagP = new FlagPainter();
-            flag = flagDb.getRandomFlag();
-            Bitmap flagBm = flagP.Draw(flag);
+            Bitmap flagBm = new Bitmap(pbFlag.Width, pbFlag.Height);
+            using (Graphics g = Graphics.FromImage((Image)flagBm))
+                g.DrawImage(flagP.Draw(flag), 0, 0, flagBm.Width, flagBm.Height);
             pbFlag.Image = flagBm;
+        }
+
+        private void MainForm_SizeChanged(object sender, EventArgs e)
+        {
+            Draw();
+        }
+
+        private void loadFlagForm()
+        {
+            flag = flagDb.getRandomFlag();
+            Draw();
             Random rnd = new Random();
             switch (rnd.Next(1, 4))
             {
@@ -131,5 +143,10 @@ namespace FlagsGame
             }
             flagDb.clearWorkFlags();
         }
+        private void fillVariants(Flag flag)
+        {
+            Random rnd = new Random();
+        }
+
     }
 }
