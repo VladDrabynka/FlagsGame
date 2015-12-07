@@ -1,6 +1,6 @@
 ﻿namespace FlagsGame
 {
-    partial class MainForm
+    partial class ClassicWithoutTime
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClassicWithoutTime));
             this.pbFlag = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnVariantD = new System.Windows.Forms.Button();

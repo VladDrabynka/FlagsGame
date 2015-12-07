@@ -19,13 +19,22 @@ namespace FlagsGame
 
         private void Launcher_Load(object sender, EventArgs e)
         {
+            cbGameMode.SelectedIndex = cbGameMode.FindString("Without time");
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnStart_Click(object sender, EventArgs e)
         {
-            MainForm mf = new MainForm();
-            mf.Show();
+            if(cbGameMode.SelectedIndex == 0)
+            {
+                ClassicWithoutTime mCh = new ClassicWithoutTime();
+                mCh.Show();
+            }
+            if(cbGameMode.SelectedIndex == 2)
+            {
+                MultipleFlags mFlg = new MultipleFlags();
+                mFlg.Show();
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)

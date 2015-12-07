@@ -21,7 +21,7 @@
   <flag name="Benin" path="Resources\benin.png" />
   <flag name="Bhutan" path="Resources\bhutan.png" />
   <flag name="Bolivia" path="Resources\bolivia.png" />
-  <flag name="Bosnia" path="Resources\bosnia.png" />
+  <flag name="Bosnia and Herzegovina" path="Resources\bosnia.png" />
   <flag name="Botswana" path="Resources\botswana.png" />
   <flag name="Brazil" path="Resources\brazil.png" />
   <flag name="Great Britain" path="Resources\britain.png" />
@@ -101,7 +101,7 @@
   <flag name="Libya" path="Resources\libya.png" />
   <flag name="Liechtenstein" path="Resources\liechtenstein.png" />
   <flag name="Lithuania" path="Resources\lithuania.png" />
-  <flag name="Lucia" path="Resources\lucia.png" />
+  <flag name="Saint Lucia" path="Resources\lucia.png" />
   <flag name="Luxembourg" path="Resources\luxembourg.png" />
   <flag name="Macedonia" path="Resources\macedonia.png" />
   <flag name="Madagascar" path="Resources\madagascar.png" />
@@ -139,7 +139,7 @@
   <flag name="Paraguay" path="Resources\paraguay.png" />
   <flag name="Peru" path="Resources\peru.png" />
   <flag name="Philippines" path="Resources\philippines.png" />
-  <flag name="Pnguinea" path="Resources\pnguinea.png" />
+  <flag name="Papua New Guinea" path="Resources\pnguinea.png" />
   <flag name="Poland" path="Resources\poland.png" />
   <flag name="Portugal" path="Resources\portugal.png" />
   <flag name="Qatar" path="Resources\qatar.png" />

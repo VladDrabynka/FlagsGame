@@ -12,7 +12,7 @@ using FlagGame;
 
 namespace FlagsGame
 {
-    public partial class MainForm : Form
+    public partial class ClassicWithoutTime : Form
     {
         string path = @"E:\Development\Kurs3\FlagsGame\FlagGame";
         Flag flag = new Flag(), flagBuffer = new Flag();
@@ -21,7 +21,7 @@ namespace FlagsGame
         Button trueButton;
         List<Button> arrayBut = new List<Button>();
 
-        public MainForm()
+        public ClassicWithoutTime()
         {
             InitializeComponent();
         }
@@ -29,11 +29,7 @@ namespace FlagsGame
         private void MainForm_Load(object sender, EventArgs e)
         {
             string pathStats = path + @"\stats.txt";
-            flagDb.LoadXml(path + @"\FlagDatabase.xml");
-            //if (!File.Exists(pathStats))
-            //{
-            //    File.CreateText(pathStats);
-            //}
+            flagDb.LoadXml(path + @"\FlagDatabaseRU.xml");
             if (File.ReadAllText(pathStats).Length == 0)
                 lbBest.Text = "0";
             else
@@ -108,7 +104,7 @@ namespace FlagsGame
 
         private void loadFlagForm()
         {
-            flag = flagDb.getRandomFlag();
+            flag = flagDb.getConcreteFlag(count);
             Draw();
             Random rnd = new Random();
             arrayBut.Add(btnVariantA);
@@ -125,7 +121,6 @@ namespace FlagsGame
             flagDb.clearWorkFlags();
         }
 
-            
         private void btnFifty_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
@@ -158,8 +153,6 @@ namespace FlagsGame
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             string outputPath = path + @"\stats.txt";
-            //StringBuilder strB = new StringBuilder();
-            //strB.Append(count + "\n");
             if (count > Convert.ToInt32(File.ReadAllText(outputPath)))
                 File.WriteAllText(outputPath, count.ToString());
         }
