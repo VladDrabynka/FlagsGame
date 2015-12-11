@@ -83,5 +83,9 @@ namespace FlagGame
             return workingFlags;
         }
 
+        public List<Flag> flagsList()
+        {
+            return flags;
+        }
     }
 }

@@ -36,14 +36,14 @@
             this.pbFlag3 = new System.Windows.Forms.PictureBox();
             this.pbFlag4 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnVariantA = new System.Windows.Forms.Button();
-            this.btnVariantB = new System.Windows.Forms.Button();
-            this.btnVariantC = new System.Windows.Forms.Button();
-            this.btnVariantD = new System.Windows.Forms.Button();
-            this.cbVariantA = new System.Windows.Forms.ComboBox();
-            this.cbVariantC = new System.Windows.Forms.ComboBox();
-            this.cbVariantB = new System.Windows.Forms.ComboBox();
             this.cbVariantD = new System.Windows.Forms.ComboBox();
+            this.cbVariantC = new System.Windows.Forms.ComboBox();
+            this.lbVariantA = new System.Windows.Forms.Label();
+            this.lbVariantB = new System.Windows.Forms.Label();
+            this.lbVariantC = new System.Windows.Forms.Label();
+            this.lbVariantD = new System.Windows.Forms.Label();
+            this.cbVariantA = new System.Windows.Forms.ComboBox();
+            this.cbVariantB = new System.Windows.Forms.ComboBox();
             this.btnApply = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -128,103 +128,103 @@
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.ColumnCount = 4;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel3.Controls.Add(this.btnVariantA, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.btnVariantB, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.btnVariantC, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.btnVariantD, 2, 1);
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.cbVariantD, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.cbVariantC, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.lbVariantA, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.lbVariantB, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.lbVariantC, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.lbVariantD, 0, 3);
             this.tableLayoutPanel3.Controls.Add(this.cbVariantA, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.cbVariantC, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.cbVariantB, 3, 0);
-            this.tableLayoutPanel3.Controls.Add(this.cbVariantD, 3, 1);
+            this.tableLayoutPanel3.Controls.Add(this.cbVariantB, 1, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(128, 319);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowCount = 4;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(577, 165);
             this.tableLayoutPanel3.TabIndex = 1;
-            // 
-            // btnVariantA
-            // 
-            this.btnVariantA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnVariantA.Location = new System.Drawing.Point(3, 3);
-            this.btnVariantA.Name = "btnVariantA";
-            this.btnVariantA.Size = new System.Drawing.Size(195, 76);
-            this.btnVariantA.TabIndex = 0;
-            this.btnVariantA.Text = "button1";
-            this.btnVariantA.UseVisualStyleBackColor = true;
-            // 
-            // btnVariantB
-            // 
-            this.btnVariantB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnVariantB.Location = new System.Drawing.Point(290, 3);
-            this.btnVariantB.Name = "btnVariantB";
-            this.btnVariantB.Size = new System.Drawing.Size(195, 76);
-            this.btnVariantB.TabIndex = 1;
-            this.btnVariantB.Text = "button2";
-            this.btnVariantB.UseVisualStyleBackColor = true;
-            // 
-            // btnVariantC
-            // 
-            this.btnVariantC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnVariantC.Location = new System.Drawing.Point(3, 85);
-            this.btnVariantC.Name = "btnVariantC";
-            this.btnVariantC.Size = new System.Drawing.Size(195, 77);
-            this.btnVariantC.TabIndex = 2;
-            this.btnVariantC.Text = "button3";
-            this.btnVariantC.UseVisualStyleBackColor = true;
-            // 
-            // btnVariantD
-            // 
-            this.btnVariantD.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnVariantD.Location = new System.Drawing.Point(290, 85);
-            this.btnVariantD.Name = "btnVariantD";
-            this.btnVariantD.Size = new System.Drawing.Size(195, 77);
-            this.btnVariantD.TabIndex = 3;
-            this.btnVariantD.Text = "button4";
-            this.btnVariantD.UseVisualStyleBackColor = true;
-            // 
-            // cbVariantA
-            // 
-            this.cbVariantA.FormattingEnabled = true;
-            this.cbVariantA.Location = new System.Drawing.Point(204, 30);
-            this.cbVariantA.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
-            this.cbVariantA.Name = "cbVariantA";
-            this.cbVariantA.Size = new System.Drawing.Size(80, 21);
-            this.cbVariantA.TabIndex = 4;
-            // 
-            // cbVariantC
-            // 
-            this.cbVariantC.FormattingEnabled = true;
-            this.cbVariantC.Location = new System.Drawing.Point(204, 112);
-            this.cbVariantC.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
-            this.cbVariantC.Name = "cbVariantC";
-            this.cbVariantC.Size = new System.Drawing.Size(80, 21);
-            this.cbVariantC.TabIndex = 5;
-            // 
-            // cbVariantB
-            // 
-            this.cbVariantB.FormattingEnabled = true;
-            this.cbVariantB.Location = new System.Drawing.Point(491, 30);
-            this.cbVariantB.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
-            this.cbVariantB.Name = "cbVariantB";
-            this.cbVariantB.Size = new System.Drawing.Size(83, 21);
-            this.cbVariantB.TabIndex = 6;
             // 
             // cbVariantD
             // 
             this.cbVariantD.FormattingEnabled = true;
-            this.cbVariantD.Location = new System.Drawing.Point(491, 112);
-            this.cbVariantD.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
+            this.cbVariantD.Location = new System.Drawing.Point(338, 133);
+            this.cbVariantD.Margin = new System.Windows.Forms.Padding(50, 10, 3, 3);
             this.cbVariantD.Name = "cbVariantD";
-            this.cbVariantD.Size = new System.Drawing.Size(83, 21);
-            this.cbVariantD.TabIndex = 7;
+            this.cbVariantD.Size = new System.Drawing.Size(121, 21);
+            this.cbVariantD.TabIndex = 12;
+            // 
+            // cbVariantC
+            // 
+            this.cbVariantC.FormattingEnabled = true;
+            this.cbVariantC.Location = new System.Drawing.Point(338, 92);
+            this.cbVariantC.Margin = new System.Windows.Forms.Padding(50, 10, 3, 3);
+            this.cbVariantC.Name = "cbVariantC";
+            this.cbVariantC.Size = new System.Drawing.Size(121, 21);
+            this.cbVariantC.TabIndex = 11;
+            // 
+            // lbVariantA
+            // 
+            this.lbVariantA.AutoSize = true;
+            this.lbVariantA.Location = new System.Drawing.Point(200, 15);
+            this.lbVariantA.Margin = new System.Windows.Forms.Padding(200, 15, 3, 0);
+            this.lbVariantA.Name = "lbVariantA";
+            this.lbVariantA.Size = new System.Drawing.Size(41, 13);
+            this.lbVariantA.TabIndex = 5;
+            this.lbVariantA.Text = "1 флаг";
+            // 
+            // lbVariantB
+            // 
+            this.lbVariantB.AutoSize = true;
+            this.lbVariantB.Location = new System.Drawing.Point(200, 56);
+            this.lbVariantB.Margin = new System.Windows.Forms.Padding(200, 15, 3, 0);
+            this.lbVariantB.Name = "lbVariantB";
+            this.lbVariantB.Size = new System.Drawing.Size(41, 13);
+            this.lbVariantB.TabIndex = 6;
+            this.lbVariantB.Text = "2 флаг";
+            // 
+            // lbVariantC
+            // 
+            this.lbVariantC.AutoSize = true;
+            this.lbVariantC.Location = new System.Drawing.Point(200, 97);
+            this.lbVariantC.Margin = new System.Windows.Forms.Padding(200, 15, 3, 0);
+            this.lbVariantC.Name = "lbVariantC";
+            this.lbVariantC.Size = new System.Drawing.Size(41, 13);
+            this.lbVariantC.TabIndex = 7;
+            this.lbVariantC.Text = "3 флаг";
+            // 
+            // lbVariantD
+            // 
+            this.lbVariantD.AutoSize = true;
+            this.lbVariantD.Location = new System.Drawing.Point(200, 138);
+            this.lbVariantD.Margin = new System.Windows.Forms.Padding(200, 15, 3, 0);
+            this.lbVariantD.Name = "lbVariantD";
+            this.lbVariantD.Size = new System.Drawing.Size(41, 13);
+            this.lbVariantD.TabIndex = 8;
+            this.lbVariantD.Text = "4 флаг";
+            // 
+            // cbVariantA
+            // 
+            this.cbVariantA.FormattingEnabled = true;
+            this.cbVariantA.Location = new System.Drawing.Point(338, 10);
+            this.cbVariantA.Margin = new System.Windows.Forms.Padding(50, 10, 3, 3);
+            this.cbVariantA.Name = "cbVariantA";
+            this.cbVariantA.Size = new System.Drawing.Size(121, 21);
+            this.cbVariantA.TabIndex = 9;
+            // 
+            // cbVariantB
+            // 
+            this.cbVariantB.FormattingEnabled = true;
+            this.cbVariantB.Location = new System.Drawing.Point(338, 51);
+            this.cbVariantB.Margin = new System.Windows.Forms.Padding(50, 10, 3, 3);
+            this.cbVariantB.Name = "cbVariantB";
+            this.cbVariantB.Size = new System.Drawing.Size(121, 21);
+            this.cbVariantB.TabIndex = 10;
             // 
             // btnApply
             // 
@@ -247,6 +247,7 @@
             this.Name = "MultipleFlags";
             this.Text = "MultipleFlags";
             this.Load += new System.EventHandler(this.MultipleFlags_Load);
+            this.SizeChanged += new System.EventHandler(this.MultipleFlags_SizeChanged);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbFlag1)).EndInit();
@@ -254,6 +255,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbFlag3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFlag4)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -267,14 +269,14 @@
         private System.Windows.Forms.PictureBox pbFlag3;
         private System.Windows.Forms.PictureBox pbFlag4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Button btnVariantA;
-        private System.Windows.Forms.Button btnVariantB;
-        private System.Windows.Forms.Button btnVariantC;
-        private System.Windows.Forms.Button btnVariantD;
-        private System.Windows.Forms.ComboBox cbVariantA;
-        private System.Windows.Forms.ComboBox cbVariantC;
-        private System.Windows.Forms.ComboBox cbVariantB;
-        private System.Windows.Forms.ComboBox cbVariantD;
         private System.Windows.Forms.Button btnApply;
+        private System.Windows.Forms.Label lbVariantA;
+        private System.Windows.Forms.Label lbVariantB;
+        private System.Windows.Forms.Label lbVariantC;
+        private System.Windows.Forms.Label lbVariantD;
+        private System.Windows.Forms.ComboBox cbVariantD;
+        private System.Windows.Forms.ComboBox cbVariantC;
+        private System.Windows.Forms.ComboBox cbVariantA;
+        private System.Windows.Forms.ComboBox cbVariantB;
     }
 }
