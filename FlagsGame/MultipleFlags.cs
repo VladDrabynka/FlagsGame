@@ -72,20 +72,20 @@ namespace FlagsGame
 
         private void loadFlagForm()
         {
-            int countF = 0;
-            for (; globalFlagCount < flagDb.flagsList().Count() && countF < 4; globalFlagCount++)
+            Flag flagB = new Flag();
+            for (int countF = 0; globalFlagCount < flagDb.flagsList().Count() && countF < 4; globalFlagCount++, countF++)
             {
-                arrayFlag.Add(flagDb.getConcreteFlag(globalFlagCount));
+                flagB = flagDb.getConcreteFlag(globalFlagCount);
+                arrayFlag.Add(flagB);
                 arrayAnswers.Add(arrayFlag.ElementAt(countF).Name);
-                countF++;
+               
             }
             comboBoxLoad();
 
-            arrayFlag = flagDb.workingFlagsList();
-            
-
             foreach (var pb in arrayPb)
                 Draw(pb);
+
+            flagDb.clearWorkFlags();
         }
 
         private void comboBoxLoad()
@@ -128,8 +128,8 @@ namespace FlagsGame
             }
             else
             {
-                foreach (var answ in arrayAnswers)
-                    answers += answ + " ";
+                for (int i = 0; i < flagBuf.Count; i++ )
+                    answers += flagBuf.ElementAt(i).Name + " ";
                 MessageBox.Show("Неправильный ответ! Правильный: " + answers, "Ответ");
                 this.Close();
             }
