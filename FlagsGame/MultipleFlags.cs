@@ -17,7 +17,7 @@ namespace FlagsGame
         string path = @"E:\Development\Kurs3\FlagsGame\FlagGame";
         Flag flag = new Flag();
         FlagDatabase flagDb = new FlagDatabase();
-        int globalFlagCount = 0;
+        int globalFlagCount = 0, count = 0;
 
         List<string> arrayAnswers = new List<string>();
         List<Flag> arrayFlag = new List<Flag>(), flagBuf = new List<Flag>();
@@ -31,16 +31,7 @@ namespace FlagsGame
 
         private void MultipleFlags_Load(object sender, EventArgs e)
         {
-            string pathStats = path + @"\stats.txt";
             flagDb.LoadXml(path + @"\FlagDatabaseRU.xml");
-            //if (File.ReadAllText(pathStats).Length == 0)
-            //    lbBest.Text = "0";
-            //else
-            //    lbBest.Text = File.ReadAllText(pathStats);
-            //arrayLb.Add(lbVariantA);
-            //arrayLb.Add(lbVariantB);
-            //arrayLb.Add(lbVariantC);
-            //arrayLb.Add(lbVariantD);
 
             arrayPb.Add(pbFlag1);
             arrayPb.Add(pbFlag2);
@@ -51,6 +42,8 @@ namespace FlagsGame
             arrayCb.Add(cbVariantB);
             arrayCb.Add(cbVariantC);
             arrayCb.Add(cbVariantD);
+
+            lbBest.Text = Convert.ToString(Properties.Settings.Default.bestStreakMultiple);
 
             loadFlagForm();
         }
@@ -72,6 +65,13 @@ namespace FlagsGame
 
         private void loadFlagForm()
         {
+            cbVariantA.Text = string.Empty;
+            cbVariantB.Text = string.Empty;
+            cbVariantC.Text = string.Empty;
+            cbVariantD.Text = string.Empty;
+
+            lbCount.Text = count.ToString();
+
             Flag flagB = new Flag();
             for (int countF = 0; globalFlagCount < flagDb.flagsList().Count() && countF < 4; globalFlagCount++, countF++)
             {
@@ -120,6 +120,7 @@ namespace FlagsGame
             if (countA == 4)
             {
                 MessageBox.Show("Правильный ответ!", "Ответ");
+                count++;
                 arrayAnswers.Clear();
                 arrayFlag.Clear();
                 flagBuf.Clear();
@@ -138,7 +139,15 @@ namespace FlagsGame
 
         private void MultipleFlags_SizeChanged(object sender, EventArgs e)
         {
+        }
 
+        private void MultipleFlags_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (count > Properties.Settings.Default.bestStreakMultiple)
+            {
+                Properties.Settings.Default.bestStreakMultiple = count;
+                Properties.Settings.Default.Save();
+            }
         }
 
     }
