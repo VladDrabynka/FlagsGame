@@ -54,7 +54,7 @@ namespace FlagGame
         public Flag getConcreteFlag(int count)
         {
             Flag flag = new Flag();
-            if (workingFlags.Capacity == 0)
+            if (workingFlags.Count == 0)
             {
                 flag = flags[count];
                 workingFlags.Add(flag);
@@ -83,5 +83,9 @@ namespace FlagGame
             return workingFlags;
         }
 
+        public List<Flag> flagsList()
+        {
+            return flags;
+        }
     }
 }
