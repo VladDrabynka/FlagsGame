@@ -27,7 +27,7 @@ namespace FlagsGame
         {
             if(cbGameMode.SelectedIndex == 0)
             {
-                ClassicWithoutTime mCh = new ClassicWithoutTime();
+                Classic mCh = new Classic();
                 mCh.Show();
             }
             if(cbGameMode.SelectedIndex == 2)

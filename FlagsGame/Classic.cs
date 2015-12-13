@@ -12,7 +12,7 @@ using FlagGame;
 
 namespace FlagsGame
 {
-    public partial class ClassicWithoutTime : Form
+    public partial class Classic : Form
     {
         string path = @"E:\Development\Kurs3\FlagsGame\FlagGame";
         Flag flag = new Flag(), flagBuffer = new Flag();
@@ -21,13 +21,17 @@ namespace FlagsGame
         Button trueButton;
         List<Button> arrayBut = new List<Button>();
 
-        public ClassicWithoutTime()
+        int timeLeft = 15;
+
+        public Classic()
         {
             InitializeComponent();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            splitContainer1.Panel2Collapsed = true;
+            tmAnswer.Enabled = false;
             string pathStats = path + @"\stats.txt";
             flagDb.LoadXml(path + @"\FlagDatabaseRU.xml");
             if (File.ReadAllText(pathStats).Length == 0)
@@ -104,9 +108,9 @@ namespace FlagsGame
 
         private void loadFlagForm()
         {
+            timeLeft = 15;
             flag = flagDb.getConcreteFlag(count);
             Draw();
-            Random rnd = new Random();
             arrayBut.Add(btnVariantA);
             arrayBut.Add(btnVariantB);
             arrayBut.Add(btnVariantC);
@@ -155,6 +159,24 @@ namespace FlagsGame
             string outputPath = path + @"\stats.txt";
             if (count > Convert.ToInt32(File.ReadAllText(outputPath)))
                 File.WriteAllText(outputPath, count.ToString());
+        }
+
+        private void tmAnswer_Tick(object sender, EventArgs e)
+        {
+            if (timeLeft > 0)
+            {
+                timeLeft = timeLeft - 1;
+                lbTime.Text = "Time: " + timeLeft + " sec";
+            }
+            else
+            {
+                // If the user ran out of time, stop the timer, show
+                // a MessageBox, and fill in the answers.
+                tmAnswer.Stop();
+                lbTime.Text = "Time's up!";
+                MessageBox.Show("You didn't finish in time.", "Sorry!");
+                this.Close();
+            }
         }
 
 
