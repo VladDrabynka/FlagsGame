@@ -21,17 +21,27 @@ namespace FlagsGame
         Button trueButton;
         List<Button> arrayBut = new List<Button>();
 
+        bool time;
         int timeLeft = 15;
 
-        public Classic()
+        public Classic(bool time)
         {
+            this.time = time;
             InitializeComponent();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            splitContainer1.Panel2Collapsed = true;
-            tmAnswer.Enabled = false;
+            if (time)
+            {
+                splitContainer1.Panel2Collapsed = false;
+                tmAnswer.Enabled = true;
+            }
+            else
+            {
+                splitContainer1.Panel2Collapsed = true;
+                tmAnswer.Enabled = false;
+            }
             string pathStats = path + @"\stats.txt";
             flagDb.LoadXml(path + @"\FlagDatabaseRU.xml");
             if (File.ReadAllText(pathStats).Length == 0)

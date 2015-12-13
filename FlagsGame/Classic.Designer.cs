@@ -46,8 +46,8 @@
             this.btnSkip = new System.Windows.Forms.Button();
             this.btnFifty = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.tmAnswer = new System.Windows.Forms.Timer(this.components);
             this.lbTime = new System.Windows.Forms.Label();
+            this.tmAnswer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbFlag)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -261,20 +261,20 @@
             this.splitContainer1.SplitterDistance = 754;
             this.splitContainer1.TabIndex = 2;
             // 
-            // tmAnswer
-            // 
-            this.tmAnswer.Enabled = true;
-            this.tmAnswer.Interval = 1000;
-            this.tmAnswer.Tick += new System.EventHandler(this.tmAnswer_Tick);
-            // 
             // lbTime
             // 
             this.lbTime.AutoSize = true;
             this.lbTime.Location = new System.Drawing.Point(12, 33);
             this.lbTime.Name = "lbTime";
-            this.lbTime.Size = new System.Drawing.Size(33, 13);
+            this.lbTime.Size = new System.Drawing.Size(68, 13);
             this.lbTime.TabIndex = 0;
-            this.lbTime.Text = "Time:";
+            this.lbTime.Text = "Time: 15 sec";
+            // 
+            // tmAnswer
+            // 
+            this.tmAnswer.Enabled = true;
+            this.tmAnswer.Interval = 1000;
+            this.tmAnswer.Tick += new System.EventHandler(this.tmAnswer_Tick);
             // 
             // Classic
             // 
