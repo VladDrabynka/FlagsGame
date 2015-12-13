@@ -192,22 +192,22 @@
             // lbBestText
             // 
             this.lbBestText.AutoSize = true;
-            this.lbBestText.Location = new System.Drawing.Point(15, 59);
-            this.lbBestText.Margin = new System.Windows.Forms.Padding(15, 15, 0, 0);
+            this.lbBestText.Location = new System.Drawing.Point(5, 59);
+            this.lbBestText.Margin = new System.Windows.Forms.Padding(5, 15, 0, 0);
             this.lbBestText.Name = "lbBestText";
-            this.lbBestText.Size = new System.Drawing.Size(63, 13);
+            this.lbBestText.Size = new System.Drawing.Size(102, 13);
             this.lbBestText.TabIndex = 2;
-            this.lbBestText.Text = "Best streak:";
+            this.lbBestText.Text = "Лучший результат:";
             // 
             // lbCountText
             // 
             this.lbCountText.AutoSize = true;
-            this.lbCountText.Location = new System.Drawing.Point(15, 15);
-            this.lbCountText.Margin = new System.Windows.Forms.Padding(15, 15, 0, 0);
+            this.lbCountText.Location = new System.Drawing.Point(5, 15);
+            this.lbCountText.Margin = new System.Windows.Forms.Padding(5, 15, 0, 0);
             this.lbCountText.Name = "lbCountText";
-            this.lbCountText.Size = new System.Drawing.Size(77, 13);
+            this.lbCountText.Size = new System.Drawing.Size(73, 13);
             this.lbCountText.TabIndex = 0;
-            this.lbCountText.Text = "Right answers:";
+            this.lbCountText.Text = "Правильных:";
             // 
             // gbHints
             // 
@@ -220,7 +220,7 @@
             this.gbHints.Size = new System.Drawing.Size(146, 334);
             this.gbHints.TabIndex = 3;
             this.gbHints.TabStop = false;
-            this.gbHints.Text = "Hints";
+            this.gbHints.Text = "Подсказки";
             // 
             // btnSkip
             // 
@@ -229,7 +229,7 @@
             this.btnSkip.Name = "btnSkip";
             this.btnSkip.Size = new System.Drawing.Size(140, 40);
             this.btnSkip.TabIndex = 1;
-            this.btnSkip.Text = "Skip";
+            this.btnSkip.Text = "Пропустить";
             this.btnSkip.UseVisualStyleBackColor = true;
             this.btnSkip.Click += new System.EventHandler(this.btnSkip_Click);
             // 
@@ -266,9 +266,9 @@
             this.lbTime.AutoSize = true;
             this.lbTime.Location = new System.Drawing.Point(12, 33);
             this.lbTime.Name = "lbTime";
-            this.lbTime.Size = new System.Drawing.Size(68, 13);
+            this.lbTime.Size = new System.Drawing.Size(79, 13);
             this.lbTime.TabIndex = 0;
-            this.lbTime.Text = "Time: 15 sec";
+            this.lbTime.Text = "Время: 15 сек";
             // 
             // tmAnswer
             // 

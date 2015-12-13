@@ -107,6 +107,11 @@ namespace FlagsGame
 
         private void btnApply_Click(object sender, EventArgs e)
         {
+            if (count + 1 == flagDb.flagsList().Count)
+            {
+                MessageBox.Show("Поздравляем! Вы прошли эту игру. Можете взять печеньку :)", "Конец игры");
+                this.Close();
+            }
             string answers = "";
             if(cbVariantA.SelectedItem == null || cbVariantB.SelectedItem == null ||cbVariantC.SelectedItem == null ||cbVariantD.SelectedItem == null)
             { 

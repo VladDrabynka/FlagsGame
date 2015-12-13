@@ -19,7 +19,7 @@ namespace FlagsGame
 
         private void Launcher_Load(object sender, EventArgs e)
         {
-            cbGameMode.SelectedIndex = cbGameMode.FindString("Without time");
+            cbGameMode.SelectedIndex = cbGameMode.FindString("Классика");
 
         }
 

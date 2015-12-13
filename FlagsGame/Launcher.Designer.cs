@@ -34,9 +34,9 @@
             this.btnAbout = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnContinue = new System.Windows.Forms.Button();
-            this.cbGameMode = new System.Windows.Forms.ComboBox();
             this.lbGameMode = new System.Windows.Forms.Label();
+            this.cbGameMode = new System.Windows.Forms.ComboBox();
+            this.btnContinue = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +58,7 @@
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(100, 50);
             this.btnStart.TabIndex = 1;
-            this.btnStart.Text = "New Game";
+            this.btnStart.Text = "Новая Игра";
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
@@ -68,7 +68,7 @@
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(100, 50);
             this.btnAbout.TabIndex = 2;
-            this.btnAbout.Text = "About";
+            this.btnAbout.Text = "Про Flags";
             this.btnAbout.UseVisualStyleBackColor = true;
             // 
             // btnExit
@@ -77,7 +77,7 @@
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(100, 50);
             this.btnExit.TabIndex = 3;
-            this.btnExit.Text = "Exit";
+            this.btnExit.Text = "Выход";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -96,6 +96,27 @@
             this.panel1.Size = new System.Drawing.Size(260, 400);
             this.panel1.TabIndex = 4;
             // 
+            // lbGameMode
+            // 
+            this.lbGameMode.AutoSize = true;
+            this.lbGameMode.Location = new System.Drawing.Point(3, 68);
+            this.lbGameMode.Name = "lbGameMode";
+            this.lbGameMode.Size = new System.Drawing.Size(73, 13);
+            this.lbGameMode.TabIndex = 6;
+            this.lbGameMode.Text = "Режим игры:";
+            // 
+            // cbGameMode
+            // 
+            this.cbGameMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbGameMode.Items.AddRange(new object[] {
+            "Классика",
+            "Классика + время",
+            "Соответствие"});
+            this.cbGameMode.Location = new System.Drawing.Point(76, 65);
+            this.cbGameMode.Name = "cbGameMode";
+            this.cbGameMode.Size = new System.Drawing.Size(140, 21);
+            this.cbGameMode.TabIndex = 5;
+            // 
             // btnContinue
             // 
             this.btnContinue.Enabled = false;
@@ -103,29 +124,8 @@
             this.btnContinue.Name = "btnContinue";
             this.btnContinue.Size = new System.Drawing.Size(100, 50);
             this.btnContinue.TabIndex = 4;
-            this.btnContinue.Text = "Continue";
+            this.btnContinue.Text = "Продолжить";
             this.btnContinue.UseVisualStyleBackColor = true;
-            // 
-            // cbGameMode
-            // 
-            this.cbGameMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbGameMode.Items.AddRange(new object[] {
-            "Without time",
-            "With time",
-            "Multiple choice"});
-            this.cbGameMode.Location = new System.Drawing.Point(76, 65);
-            this.cbGameMode.Name = "cbGameMode";
-            this.cbGameMode.Size = new System.Drawing.Size(121, 21);
-            this.cbGameMode.TabIndex = 5;
-            // 
-            // lbGameMode
-            // 
-            this.lbGameMode.AutoSize = true;
-            this.lbGameMode.Location = new System.Drawing.Point(3, 68);
-            this.lbGameMode.Name = "lbGameMode";
-            this.lbGameMode.Size = new System.Drawing.Size(68, 13);
-            this.lbGameMode.TabIndex = 6;
-            this.lbGameMode.Text = "Game Mode:";
             // 
             // Launcher
             // 

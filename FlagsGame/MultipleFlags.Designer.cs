@@ -269,7 +269,7 @@
             // lbBest
             // 
             this.lbBest.AutoSize = true;
-            this.lbBest.Location = new System.Drawing.Point(111, 53);
+            this.lbBest.Location = new System.Drawing.Point(112, 53);
             this.lbBest.Margin = new System.Windows.Forms.Padding(3, 15, 0, 0);
             this.lbBest.Name = "lbBest";
             this.lbBest.Size = new System.Drawing.Size(13, 13);
@@ -279,17 +279,17 @@
             // lbBestText
             // 
             this.lbBestText.AutoSize = true;
-            this.lbBestText.Location = new System.Drawing.Point(15, 53);
-            this.lbBestText.Margin = new System.Windows.Forms.Padding(15, 15, 0, 0);
+            this.lbBestText.Location = new System.Drawing.Point(5, 53);
+            this.lbBestText.Margin = new System.Windows.Forms.Padding(5, 15, 0, 0);
             this.lbBestText.Name = "lbBestText";
-            this.lbBestText.Size = new System.Drawing.Size(63, 13);
+            this.lbBestText.Size = new System.Drawing.Size(102, 13);
             this.lbBestText.TabIndex = 3;
-            this.lbBestText.Text = "Best streak:";
+            this.lbBestText.Text = "Лучший результат:";
             // 
             // lbCount
             // 
             this.lbCount.AutoSize = true;
-            this.lbCount.Location = new System.Drawing.Point(111, 15);
+            this.lbCount.Location = new System.Drawing.Point(112, 15);
             this.lbCount.Margin = new System.Windows.Forms.Padding(3, 15, 0, 0);
             this.lbCount.Name = "lbCount";
             this.lbCount.Size = new System.Drawing.Size(13, 13);
@@ -299,12 +299,12 @@
             // lbCountText
             // 
             this.lbCountText.AutoSize = true;
-            this.lbCountText.Location = new System.Drawing.Point(15, 15);
-            this.lbCountText.Margin = new System.Windows.Forms.Padding(15, 15, 0, 0);
+            this.lbCountText.Location = new System.Drawing.Point(5, 15);
+            this.lbCountText.Margin = new System.Windows.Forms.Padding(5, 15, 0, 0);
             this.lbCountText.Name = "lbCountText";
-            this.lbCountText.Size = new System.Drawing.Size(77, 13);
+            this.lbCountText.Size = new System.Drawing.Size(73, 13);
             this.lbCountText.TabIndex = 1;
-            this.lbCountText.Text = "Right answers:";
+            this.lbCountText.Text = "Правильных:";
             // 
             // MultipleFlags
             // 

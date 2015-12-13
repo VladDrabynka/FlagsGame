@@ -15,7 +15,7 @@ namespace FlagsGame
     public partial class Classic : Form
     {
         string path = @"E:\Development\Kurs3\FlagsGame\FlagGame";
-        Flag flag = new Flag(), flagBuffer = new Flag();
+        Flag flag = new Flag();
         FlagDatabase flagDb = new FlagDatabase();
         int count = 0;
         Button trueButton;
@@ -34,36 +34,38 @@ namespace FlagsGame
         {
             if (time)
             {
+                lbBest.Text = Convert.ToString(Properties.Settings.Default.bestStreakClassicTime);
                 splitContainer1.Panel2Collapsed = false;
                 tmAnswer.Enabled = true;
             }
             else
             {
+                lbBest.Text = Convert.ToString(Properties.Settings.Default.bestStreakClassic);
                 splitContainer1.Panel2Collapsed = true;
                 tmAnswer.Enabled = false;
             }
-            string pathStats = path + @"\stats.txt";
             flagDb.LoadXml(path + @"\FlagDatabaseRU.xml");
-            if (File.ReadAllText(pathStats).Length == 0)
-                lbBest.Text = "0";
-            else
-                lbBest.Text = File.ReadAllText(pathStats);
             loadFlagForm();
         }
 
         private void buttonClick(object sender, EventArgs e)
         {
+            if (count + 1 == flagDb.flagsList().Count)
+            {
+                MessageBox.Show("Поздравляем! Вы прошли эту игру. Можете взять печеньку :)", "Конец игры");
+                this.Close();
+                return;
+            }
             if ((sender as Button) == trueButton)
             {
                 MessageBox.Show("Правильный ответ!", "Ответ");
                 ++count;
-                lbCount.Text = count.ToString();
                 arrayBut.Clear();
                 loadFlagForm();
             }
             else
             {
-                MessageBox.Show("Неправильный ответ! Правильный: " + flag.Name, "Ответ");
+                MessageBox.Show("Неправильный ответ! Правильный: " + flag.Name + ". Количество правильных ответов: " + count, "Ответ");
                 this.Close();
             }
 
@@ -118,6 +120,8 @@ namespace FlagsGame
 
         private void loadFlagForm()
         {
+            lbCount.Text = count.ToString();
+            lbTime.Text = "Время: 15 сек";
             timeLeft = 15;
             flag = flagDb.getConcreteFlag(count);
             Draw();
@@ -155,20 +159,35 @@ namespace FlagsGame
                 throw new Exception();
             }
 
-            //btnFifty.Enabled = false;
+            btnFifty.Enabled = false;
         }
 
         private void btnSkip_Click(object sender, EventArgs e)
         {
+            if (count + 1 == flagDb.flagsList().Count)
+            {
+                MessageBox.Show("Поздравляем! Вы прошли эту игру. Можете взять печеньку :)", "Конец игры");
+                this.Close();
+                return;
+            }
+            arrayBut.Clear();
+            count++;
             loadFlagForm();
             btnSkip.Enabled = false;
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            string outputPath = path + @"\stats.txt";
-            if (count > Convert.ToInt32(File.ReadAllText(outputPath)))
-                File.WriteAllText(outputPath, count.ToString());
+            if (count > Properties.Settings.Default.bestStreakClassic && !time)
+            {
+                Properties.Settings.Default.bestStreakClassic = count;
+                Properties.Settings.Default.Save();
+            }
+            if (count > Properties.Settings.Default.bestStreakClassicTime && time)
+            {
+                Properties.Settings.Default.bestStreakClassicTime = count;
+                Properties.Settings.Default.Save();
+            }
         }
 
         private void tmAnswer_Tick(object sender, EventArgs e)
@@ -176,15 +195,13 @@ namespace FlagsGame
             if (timeLeft > 0)
             {
                 timeLeft = timeLeft - 1;
-                lbTime.Text = "Time: " + timeLeft + " sec";
+                lbTime.Text = "Время: " + timeLeft + " сек";
             }
             else
             {
-                // If the user ran out of time, stop the timer, show
-                // a MessageBox, and fill in the answers.
                 tmAnswer.Stop();
-                lbTime.Text = "Time's up!";
-                MessageBox.Show("You didn't finish in time.", "Sorry!");
+                lbTime.Text = "Время вышло!";
+                MessageBox.Show("Вы не ответели за укзанное время. Вы проиграли.", "Конец игры");
                 this.Close();
             }
         }
