@@ -46,7 +46,7 @@
             this.lbHeadline.BackColor = System.Drawing.Color.Transparent;
             this.lbHeadline.Font = new System.Drawing.Font("Verdana", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lbHeadline.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbHeadline.Location = new System.Drawing.Point(48, 0);
+            this.lbHeadline.Location = new System.Drawing.Point(213, 0);
             this.lbHeadline.Name = "lbHeadline";
             this.lbHeadline.Size = new System.Drawing.Size(166, 59);
             this.lbHeadline.TabIndex = 0;
@@ -54,7 +54,7 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(86, 102);
+            this.btnStart.Location = new System.Drawing.Point(40, 103);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(100, 50);
             this.btnStart.TabIndex = 1;
@@ -64,7 +64,7 @@
             // 
             // btnAbout
             // 
-            this.btnAbout.Location = new System.Drawing.Point(86, 242);
+            this.btnAbout.Location = new System.Drawing.Point(300, 103);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(100, 50);
             this.btnAbout.TabIndex = 2;
@@ -73,7 +73,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(86, 312);
+            this.btnExit.Location = new System.Drawing.Point(430, 103);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(100, 50);
             this.btnExit.TabIndex = 3;
@@ -93,13 +93,13 @@
             this.panel1.Controls.Add(this.btnStart);
             this.panel1.Location = new System.Drawing.Point(12, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(260, 400);
+            this.panel1.Size = new System.Drawing.Size(562, 180);
             this.panel1.TabIndex = 4;
             // 
             // lbGameMode
             // 
             this.lbGameMode.AutoSize = true;
-            this.lbGameMode.Location = new System.Drawing.Point(3, 68);
+            this.lbGameMode.Location = new System.Drawing.Point(145, 71);
             this.lbGameMode.Name = "lbGameMode";
             this.lbGameMode.Size = new System.Drawing.Size(73, 13);
             this.lbGameMode.TabIndex = 6;
@@ -112,7 +112,7 @@
             "Классика",
             "Классика + время",
             "Соответствие"});
-            this.cbGameMode.Location = new System.Drawing.Point(76, 65);
+            this.cbGameMode.Location = new System.Drawing.Point(224, 68);
             this.cbGameMode.Name = "cbGameMode";
             this.cbGameMode.Size = new System.Drawing.Size(140, 21);
             this.cbGameMode.TabIndex = 5;
@@ -120,7 +120,7 @@
             // btnContinue
             // 
             this.btnContinue.Enabled = false;
-            this.btnContinue.Location = new System.Drawing.Point(86, 172);
+            this.btnContinue.Location = new System.Drawing.Point(170, 103);
             this.btnContinue.Name = "btnContinue";
             this.btnContinue.Size = new System.Drawing.Size(100, 50);
             this.btnContinue.TabIndex = 4;
@@ -131,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 411);
+            this.ClientSize = new System.Drawing.Size(584, 187);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Launcher";

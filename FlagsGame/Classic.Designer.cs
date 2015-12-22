@@ -247,6 +247,7 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.IsSplitterFixed = true;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -264,9 +265,10 @@
             // lbTime
             // 
             this.lbTime.AutoSize = true;
+            this.lbTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lbTime.Location = new System.Drawing.Point(12, 33);
             this.lbTime.Name = "lbTime";
-            this.lbTime.Size = new System.Drawing.Size(79, 13);
+            this.lbTime.Size = new System.Drawing.Size(92, 13);
             this.lbTime.TabIndex = 0;
             this.lbTime.Text = "Время: 15 сек";
             // 

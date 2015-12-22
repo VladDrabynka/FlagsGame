@@ -15,11 +15,14 @@ namespace FlagsGame
     public partial class Classic : Form
     {
         string path = @"E:\Development\Kurs3\FlagsGame\FlagGame";
+        Facade facade = new Facade();
+        //string path = @"D:\FlagsGame\FlagGame";
         Flag flag = new Flag();
         FlagDatabase flagDb = new FlagDatabase();
         int count = 0;
         Button trueButton;
         List<Button> arrayBut = new List<Button>();
+        IFlagIterator flagIter;  
 
         bool time;
         int timeLeft = 15;
@@ -27,6 +30,7 @@ namespace FlagsGame
         public Classic(bool time)
         {
             this.time = time;
+            flagIter = flagDb.getIterator(); 
             InitializeComponent();
         }
 
@@ -56,15 +60,19 @@ namespace FlagsGame
                 this.Close();
                 return;
             }
-            if ((sender as Button) == trueButton)
+            /*if ((sender as Button) == trueButton)*/
+            if (facade.checkAnswerOne((sender as Button), trueButton))
             {
                 MessageBox.Show("Правильный ответ!", "Ответ");
                 ++count;
+                flagIter.Next();
                 arrayBut.Clear();
                 loadFlagForm();
             }
+
             else
             {
+                tmAnswer.Enabled = false;
                 MessageBox.Show("Неправильный ответ! Правильный: " + flag.Name + ". Количество правильных ответов: " + count, "Ответ");
                 this.Close();
             }
@@ -123,7 +131,8 @@ namespace FlagsGame
             lbCount.Text = count.ToString();
             lbTime.Text = "Время: 15 сек";
             timeLeft = 15;
-            flag = flagDb.getConcreteFlag(count);
+            //flag = flagDb.getConcreteFlag(count);
+            flag = flagIter.CurrentItem();
             Draw();
             arrayBut.Add(btnVariantA);
             arrayBut.Add(btnVariantB);
@@ -172,6 +181,7 @@ namespace FlagsGame
             }
             arrayBut.Clear();
             count++;
+            flagIter.Next();
             loadFlagForm();
             btnSkip.Enabled = false;
         }

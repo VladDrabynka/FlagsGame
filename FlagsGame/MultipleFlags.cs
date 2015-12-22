@@ -15,6 +15,7 @@ namespace FlagsGame
     public partial class MultipleFlags : Form
     {
         string path = @"E:\Development\Kurs3\FlagsGame\FlagGame";
+        //string path = @"D:\FlagsGame\FlagGame";
         Flag flag = new Flag();
         FlagDatabase flagDb = new FlagDatabase();
         int globalFlagCount = 0, count = 0;
@@ -23,6 +24,8 @@ namespace FlagsGame
         List<Flag> arrayFlag = new List<Flag>(), flagBuf = new List<Flag>();
         List<PictureBox> arrayPb = new List<PictureBox>();
         List<ComboBox> arrayCb = new List<ComboBox>();
+
+        Facade facade = new Facade();
 
         public MultipleFlags()
         {
@@ -118,11 +121,12 @@ namespace FlagsGame
                 MessageBox.Show("Вы не выбрали один из ответов! Попробуйте ещё раз.", "Ошибка");
                 return;
             }
-            int countA = 0;
+            /*int countA = 0;
             foreach (var cbA in arrayCb)
                 if (cbA.SelectedItem.ToString() == flagBuf.ElementAt(countA).Name)
                     countA++;
-            if (countA == 4)
+            if (countA == 4)*/
+            if (facade.checkAnswerFour(arrayCb, flagBuf))
             {
                 MessageBox.Show("Правильный ответ!", "Ответ");
                 count++;

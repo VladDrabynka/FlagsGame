@@ -20,6 +20,13 @@ namespace FlagGame
             XDocument loadFile = XDocument.Load(path);
             XElement mainElement = loadFile.Element("flags");
 
+
+            /*while (!iter.IsDone())
+            {                
+                flags.Add(iter.CurrentItem());
+                iter.Next();
+            }*/
+
             foreach (var flag in mainElement.Elements("flag"))
                 flags.Add(new Flag(flag.Attribute("name").Value, flag.Attribute("path").Value));
 
@@ -28,6 +35,24 @@ namespace FlagGame
 
         public void SaveXml()
         { //to do 
+        }
+
+        public IFlagIterator getIterator()
+        {
+            return new FlagIterator(this);
+        }
+
+        public int Size()
+        {
+            return flags.Count;
+        }
+
+        public Flag this[int index]
+        {
+            get
+            {
+                return flags.ElementAt(index);
+            }
         }
 
         public Flag getRandomFlag()
